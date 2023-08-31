@@ -5,10 +5,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)  # CORS 처리
 
-@app.route('/', methods=['GET','POST'])
+@app.route('/test', methods=['GET','POST'])
 def test():
     r = sr.Recognizer()
-
+    result=''
     if request.method == 'POST':
 
         # 보이스 데이터 받기
