@@ -371,6 +371,11 @@
 "Assets/GUIPackCartoon/Demo/Scripts/TintedButton.cs"
 "Assets/GUIPackCartoon/Demo/Scripts/Transition.cs"
 "Assets/SW/02.Scripts/FlaskClient.cs"
+"Assets/SW/02.Scripts/HttpManager.cs"
+"Assets/SW/02.Scripts/MicrophoneRecoder.cs"
+"Assets/SW/02.Scripts/Recoder.cs"
+"Assets/SW/02.Scripts/SaveWav.cs"
+"Assets/SW/02.Scripts/StartRecoder.cs"
 -langversion:9.0
 
 /deterministic

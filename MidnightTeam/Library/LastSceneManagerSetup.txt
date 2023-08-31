@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/GUIPackCartoon/Demo/Scenes/Home.unity
+- path: Assets/SW/01.Scenes/Midnight_PSW.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

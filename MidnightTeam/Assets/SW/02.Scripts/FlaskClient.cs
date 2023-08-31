@@ -8,8 +8,33 @@ public class FlaskClient : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(GetRequest("http://localhost:5000/test"));
+        //StartCoroutine(GetRequest("192.168.1.46:5000/test"));
     }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            HttpInfo info = new HttpInfo();
+            info.Set(RequestType.GET, "/test", (DownloadHandler downloadHandler) =>
+            {
+                print("OnReceiveGet : " + downloadHandler.text);
+            });
+            HttpManager.Get().SendRequest(info);
+        }
+        if(Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            HttpInfo info = new HttpInfo();
+            info.Set(RequestType.FILE_UPLOAD, "/test", (DownloadHandler downloadHandler) =>
+            {
+                print("OnReceiveGet : " + downloadHandler.text);
+                AAA aaa = JsonUtility.FromJson<AAA>(downloadHandler.text);
+                print(aaa.message); 
+            });
+            HttpManager.Get().SendRequest(info);
+        }
+    }
+    
 
     IEnumerator GetRequest(string url)
     {
